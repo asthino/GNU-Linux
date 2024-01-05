@@ -10,7 +10,7 @@ fi
 if command -v git &> /dev/null; then
     cp ./yougit.sh /usr/bin/.
 
-    sudo chmod +x ./yougit.sh
+    sudo chmod 777 ./yougit.sh
     echo "alias yougit='/usr/bin/yougit.sh'" >> ~/.bashrc
     . ~/.bashrc
 else
