@@ -1,14 +1,18 @@
 #!/bin/bash
 REPO="https://github.com/asthino/GNU-Linux.git"
 
-cd "/usr/bin/"
+if command -v source  &> /dev/null; then
+    break
+else 
+    sudo apt-get install source
+fi
+
 if command -v git &> /dev/null; then
-    git clone $REPO yougit
-    cd yougit
+    cp ./yougit.sh /usr/bin/.
 
     sudo chmod +x ./yougit.sh
-    echo "alias yougit='/usr/bin/yougit/yougit.sh'" >> ~/.bashrc
-    source ~/.bashrc
+    echo "alias yougit='/usr/bin/yougit.sh'" >> ~/.bashrc
+    . ~/.bashrc
 else
     echo "Git n'est pas installé sur ce système."
 fi

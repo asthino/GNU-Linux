@@ -1,5 +1,6 @@
 #!/bin/bash
-if "$1" -eq ""; then
+# Vérifie si l'argument optionel pour le repertoire existe
+if [ -z $1 ]; then
     DIR="./"
 else 
     DIR="$1"
