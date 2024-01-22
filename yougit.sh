@@ -28,7 +28,7 @@ if command -v git &> /dev/null; then
 
         # Attente de 5 secondes avant la prochaine vérification
         sleep 5
-        done &
+        done
     else
         echo "Vous n'êtes pas dans un répertoire Git."
     fi
